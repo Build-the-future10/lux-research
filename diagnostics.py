@@ -1,8 +1,14 @@
 import numpy as np
 
-class DiagnosticSuite:
-    def stability_index(self, results):
-        return np.std(results) / np.mean(results)
 
-    def complexity_estimate(self, runtime, data_size):
-        return runtime / data_size
+class Diagnostics:
+
+    @staticmethod
+    def stability_index(data):
+        return float(np.std(data) / np.mean(data))
+
+    @staticmethod
+    def convergence(samples):
+        first_half = np.mean(samples[:len(samples)//2])
+        second_half = np.mean(samples[len(samples)//2:])
+        return abs(first_half - second_half)
