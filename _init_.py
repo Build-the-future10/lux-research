@@ -3,12 +3,12 @@ from .experiment import Experiment
 from .stats import StatisticalEngine
 from .hypothesis import HypothesisTester
 from .meta import MetaAnalyzer
-from .reproducibility import ReproManager
-from .parallel import ParallelExecutor
 from .mltools import MLIntegrator
-from .diagnostics import DiagnosticSuite
-from .symbolic import SymbolicEngine
-from .reporting import ReportGenerator
+from .parallel import ParallelExecutor
 from .dataset import DatasetManager
+from .reporting import ReportGenerator
+from .diagnostics import DiagnosticSuite
+from .reproducibility import ReproManager
+from .symbolic import SymbolicEngine
 
-__version__ = "4.0.0"
+__version__ = "1.0.0"
